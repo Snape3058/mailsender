@@ -176,9 +176,9 @@ def opt_parse(mail_buffer):
         print(usage_msg)
         exit(1)
     try:
-        opts, args = getopt(argv[1:], "hvt:H:f:p:s:dc:",
+        opts, args = getopt(argv[1:], "hvt:H:f:p:s:dc:u:",
                             ["help", "version", "to_list=", "host=", "sender=",
-                             "passwd=", "subject=", "debug", "config="])
+                             "passwd=", "subject=", "debug", "config=", "username="])
     except GetoptError as err:                                              # illegal options, raise error and exit
         print(err)
         print('Use "mailsender -h" for usage.')
